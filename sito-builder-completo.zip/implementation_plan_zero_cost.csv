@@ -1,0 +1,16 @@
+Fase,Attività,Strumenti_Gratuiti,Tempo_Stimato,Costo_Effettivo
+Fase 1: Setup Iniziale,Registrazione piattaforme gratuite,"Adalo, GitHub, Figma",3-5 giorni,0€
+Fase 1: Setup Iniziale,Setup GitHub repository,"GitHub, VS Code",1 giorno,0€
+Fase 1: Setup Iniziale,Progettazione UI/UX con Figma,"Figma, Canva, Unsplash",5-7 giorni,0€
+Fase 2: Sviluppo MVP,Sviluppo con Adalo/FlutterFlow,"Adalo Free Plan, Flutter",3-4 settimane,0€
+Fase 2: Sviluppo MVP,Creazione template base (5-7),"Template library, AI assistants",1-2 settimane,0€
+Fase 2: Sviluppo MVP,Integrazione sistema utenti,"Firebase Auth, Supabase",1 settimana,0€
+Fase 3: Testing & Deploy,Test su dispositivi reali,"Browser DevTools, Mobile simulators",1 settimana,0€
+Fase 3: Testing & Deploy,Deploy su hosting gratuito,"Vercel, Netlify, Firebase",2-3 giorni,0€
+Fase 3: Testing & Deploy,Configurazione analytics,"Google Analytics, Hotjar",1-2 giorni,0€
+Fase 4: Monetizzazione,Launch piano freemium,Stripe (no setup fee),1 settimana,0€ (% su transazioni)
+Fase 4: Monetizzazione,Setup pagamenti Stripe,"PayPal, Stripe",2-3 giorni,0€ (% su transazioni)
+Fase 4: Monetizzazione,Primi utenti beta,"Social media, email marketing",2-4 settimane,0€
+Fase 5: Crescita,Ottimizzazione conversioni,A/B testing tools,Ongoing,0€
+Fase 5: Crescita,Marketing organico,"Content marketing, SEO",Ongoing,0€
+Fase 5: Crescita,Scale con ricavi,Reinvestimento ricavi,Ongoing,0€

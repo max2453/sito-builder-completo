@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteBuilder Pro - Crea il tuo sito in 5 minuti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <h2>SiteBuilder Pro</h2>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#prezzi">Prezzi</a>
+                        <a href="#" onclick="showLogin()">Accedi</a>
+                        <button class="btn btn--primary" onclick="showSignup()">Inizia Gratis</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Crea il tuo sito web professionale in 5 minuti</h1>
+                    <p>Editor drag & drop intuitivo, 20+ template pronti, pubblicazione istantanea. Inizia gratis e passa a premium quando vuoi.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn--primary btn--lg" onclick="showSignup()">Inizia Gratis</button>
+                        <button class="btn btn--secondary btn--lg" onclick="showUpgrade()">Prova Premium - 5€/mese</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <h2>Perché scegliere SiteBuilder Pro?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Veloce e Intuitivo</h3>
+                        <p>Editor drag & drop che non richiede conoscenze tecniche</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>I tuoi siti funzionano perfettamente su ogni dispositivo</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>20+ Template</h3>
+                        <p>Design professionali per ogni settore e necessità</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="prezzi" class="pricing">
+            <div class="container">
+                <h2>Scegli il piano perfetto per te</h2>
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <div class="plan-name">Piano Gratuito</div>
+                        <div class="plan-price">0€<span>/mese</span></div>
+                        <ul class="plan-features">
+                            <li>✅ 1 sito web</li>
+                            <li>✅ 5 template base</li>
+                            <li>✅ 3 elementi per pagina</li>
+                            <li>✅ 500MB storage</li>
+                            <li>✅ Sottodominio (.miosito.com)</li>
+                            <li>⚠️ Watermark presente</li>
+                            <li>📧 Supporto community</li>
+                        </ul>
+                        <button class="btn btn--secondary btn--full-width" onclick="showSignup()">Inizia Gratis</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">Consigliato</div>
+                        <div class="plan-name">Piano Premium</div>
+                        <div class="plan-price">5€<span>/mese</span></div>
+                        <ul class="plan-features">
+                            <li>✅ Siti web illimitati</li>
+                            <li>✅ 15+ template premium</li>
+                            <li>✅ Elementi illimitati</li>
+                            <li>✅ 10GB storage</li>
+                            <li>✅ Dominio personalizzato</li>
+                            <li>✅ Nessun watermark</li>
+                            <li>✅ E-commerce base</li>
+                            <li>✅ SEO tools & Analytics</li>
+                            <li>✅ Supporto prioritario</li>
+                        </ul>
+                        <button class="btn btn--primary btn--full-width" onclick="showUpgrade()">Inizia Premium</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Cosa dicono i nostri utenti</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <p>"Ho creato il mio portfolio in 10 minuti. Incredibile!"</p>
+                        <div class="testimonial-author">
+                            <strong>Marco R.</strong> - Designer
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Finalmente uno strumento che non richiede programmazione."</p>
+                        <div class="testimonial-author">
+                            <strong>Laura M.</strong> - Imprenditrice
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Il piano premium vale ogni centesimo. Lo consiglio!"</p>
+                        <div class="testimonial-author">
+                            <strong>Giuseppe T.</strong> - Ristoratore
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3>SiteBuilder Pro</h3>
+                        <p>Crea siti web professionali senza codice</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Prodotto</h4>
+                            <a href="#">Template</a>
+                            <a href="#">Editor</a>
+                            <a href="#">Hosting</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Supporto</h4>
+                            <a href="#">Documentazione</a>
+                            <a href="#">Community</a>
+                            <a href="#">Contatti</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 SiteBuilder Pro. Tutti i diritti riservati.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page">
+        <nav class="dashboard-nav">
+            <div class="nav-content">
+                <div class="logo">
+                    <h3>SiteBuilder Pro</h3>
+                </div>
+                <div class="nav-user">
+                    <span class="user-plan" id="user-plan-badge">Piano Gratuito</span>
+                    <button class="btn btn--outline btn--sm" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h1>I tuoi progetti</h1>
+                <button class="btn btn--primary" onclick="showTemplates()">+ Nuovo Progetto</button>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3 id="sites-count">0</h3>
+                    <p>Siti creati</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="storage-used">0MB</h3>
+                    <p>Storage utilizzato</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="elements-used">0/3</h3>
+                    <p>Elementi utilizzati</p>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <div class="empty-state">
+                    <div class="empty-icon">📄</div>
+                    <h3>Nessun progetto ancora</h3>
+                    <p>Inizia creando il tuo primo sito web</p>
+                    <button class="btn btn--primary" onclick="showTemplates()">Scegli un template</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates Page -->
+    <div id="templates-page" class="page">
+        <nav class="dashboard-nav">
+            <div class="nav-content">
+                <div class="nav-back">
+                    <button class="btn btn--outline btn--sm" onclick="showDashboard()">← Dashboard</button>
+                </div>
+                <h3>Scegli un template</h3>
+            </div>
+        </nav>
+
+        <div class="templates-container">
+            <div class="templates-filters">
+                <button class="filter-btn active" data-category="all">Tutti</button>
+                <button class="filter-btn" data-category="Business">Business</button>
+                <button class="filter-btn" data-category="E-commerce">E-commerce</button>
+                <button class="filter-btn" data-category="Portfolio">Portfolio</button>
+                <button class="filter-btn" data-category="Blog">Blog</button>
+                <button class="filter-btn" data-category="Ristoranti">Ristoranti</button>
+                <button class="filter-btn" data-category="Landing">Landing</button>
+                <button class="filter-btn" data-category="Professional">Professional</button>
+            </div>
+
+            <div class="templates-grid" id="templates-grid">
+                <!-- Templates will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Editor Page -->
+    <div id="editor-page" class="page">
+        <div class="editor-header">
+            <div class="editor-nav">
+                <button class="btn btn--outline btn--sm" onclick="showDashboard()">← Dashboard</button>
+                <span class="project-name" id="current-project-name">Nuovo Progetto</span>
+            </div>
+            <div class="editor-actions">
+                <button class="btn btn--outline btn--sm" onclick="saveProject()">💾 Salva</button>
+                <button class="btn btn--outline btn--sm" onclick="previewSite()">👁️ Anteprima</button>
+                <button class="btn btn--primary btn--sm" onclick="publishSite()">🚀 Pubblica</button>
+            </div>
+        </div>
+
+        <div class="editor-layout">
+            <!-- Components Sidebar -->
+            <div class="editor-sidebar">
+                <h4>Componenti</h4>
+                <div class="components-list" id="components-list">
+                    <!-- Components will be populated by JavaScript -->
+                </div>
+                <div class="elements-counter">
+                    <span id="elements-counter">0/3 elementi utilizzati</span>
+                    <small>Piano Gratuito</small>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <div class="editor-canvas">
+                <div class="canvas-header">
+                    <div class="device-switcher">
+                        <button class="device-btn active" data-device="desktop">🖥️</button>
+                        <button class="device-btn" data-device="tablet">📱</button>
+                        <button class="device-btn" data-device="mobile">📱</button>
+                    </div>
+                </div>
+                <div class="canvas-container" id="canvas-container">
+                    <div class="canvas" id="canvas">
+                        <div class="drop-zone">
+                            <p>Trascina i componenti qui per iniziare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Properties Panel -->
+            <div class="properties-panel">
+                <h4>Proprietà</h4>
+                <div class="properties-content" id="properties-content">
+                    <p>Seleziona un elemento per modificarne le proprietà</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Accedi</h3>
+                <button class="modal-close" onclick="closeModal('login-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="login(event)">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Accedi</button>
+                </form>
+                <p style="text-align: center; margin-top: 16px;">
+                    Non hai un account? <a href="#" onclick="showSignup()">Registrati</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Registrati Gratis</h3>
+                <button class="modal-close" onclick="closeModal('signup-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="signup(event)">
+                    <div class="form-group">
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Inizia Gratis</button>
+                </form>
+                <p style="text-align: center; margin-top: 16px;">
+                    Hai già un account? <a href="#" onclick="showLogin()">Accedi</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upgrade Modal -->
+    <div id="upgrade-modal" class="modal hidden">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3>Passa a Premium</h3>
+                <button class="modal-close" onclick="closeModal('upgrade-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="upgrade-comparison">
+                    <div class="upgrade-column">
+                        <h4>Piano Gratuito</h4>
+                        <div class="price">0€/mese</div>
+                        <ul>
+                            <li>1 sito web</li>
+                            <li>3 elementi max</li>
+                            <li>Watermark presente</li>
+                            <li>Sottodominio</li>
+                        </ul>
+                    </div>
+                    <div class="upgrade-column premium">
+                        <h4>Piano Premium</h4>
+                        <div class="price">5€/mese</div>
+                        <ul>
+                            <li>Siti illimitati</li>
+                            <li>Elementi illimitati</li>
+                            <li>Nessun watermark</li>
+                            <li>Dominio personalizzato</li>
+                            <li>Template premium</li>
+                            <li>E-commerce</li>
+                            <li>SEO & Analytics</li>
+                        </ul>
+                        <button class="btn btn--primary btn--full-width" onclick="upgradeToPremium()">
+                            Upgrade Ora - 5€/mese
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal modal-fullscreen hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Anteprima Sito</h3>
+                <button class="modal-close" onclick="closeModal('preview-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-frame" id="preview-frame">
+                    <!-- Site preview will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
