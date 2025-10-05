@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudentsAI Helper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="logo"><span class="material-icons">school</span> StudentsAI Helper</div>
+    <nav class="nav">
+      <button class="nav-btn active" data-section="data-entry">Dati Personali</button>
+      <button class="nav-btn" data-section="calendar">Calendario</button>
+      <button class="nav-btn" data-section="grades">Registro Voti</button>
+      <button class="nav-btn" data-section="goals">Obiettivi</button>
+      <button class="nav-btn" data-section="materials">Materiali Studio</button>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section id="data-entry" class="section active">
+    <h2>Dati Personali, Materie e Compiti</h2>
+    <h3>Materie</h3>
+    <table id="materie-table">
+      <thead><tr><th>Materia</th><th>Azioni</th></tr></thead>
+      <tbody id="materie-table-body"></tbody>
+    </table>
+    <form id="materie-form" style="margin-top:1rem;">
+      <input type="text" id="materie-input" placeholder="Nuova materia" required />
+      <button type="submit">Aggiungi Materia</button>
+    </form>
+    <h3>Compiti</h3>
+    <table id="compiti-table">
+      <thead><tr><th>Materia</th><th>Titolo</th><th>Scadenza</th><th>Priorità</th><th>Azioni</th></tr></thead>
+      <tbody id="compiti-table-body"></tbody>
+    </table>
+    <form id="compiti-form" style="margin-top:1rem;">
+      <input type="text" id="compito-materia" placeholder="Materia" required />
+      <input type="text" id="compito-titolo" placeholder="Titolo" required />
+      <input type="date" id="compito-scadenza" required />
+      <input type="text" id="compito-priorita" placeholder="Priorità" required />
+      <button type="submit">Aggiungi Compito</button>
+    </form>
+  </section>
+  <section id="calendar" class="section">
+    <h2>Calendario Studio</h2>
+    <div id="calendar-container" style="display:flex; gap:20px;">
+      <div id="calendar" style="flex:1;">
+        <div id="calendar-controls">
+          <button id="prev-month">«</button>
+          <span id="calendar-month-year"></span>
+          <button id="next-month">»</button>
+        </div>
+        <table id="calendar-table">
+          <thead><tr><th>Lun</th><th>Mar</th><th>Mer</th><th>Gio</th><th>Ven</th><th>Sab</th><th>Dom</th></tr></thead>
+          <tbody id="calendar-body"></tbody>
+        </table>
+      </div>
+      <div id="calendar-events" style="flex:1;">
+        <div id="calendar-event-form" class="hidden">
+          <form id="event-form">
+            <label for="event-date">Data:</label>
+            <input type="date" id="event-date" required />
+            <label for="event-title">Titolo:</label>
+            <input type="text" id="event-title" required />
+            <label for="event-type">Tipo Evento:</label>
+            <select id="event-type">
+              <option value="lezione">Lezione</option>
+              <option value="compito">Compito</option>
+              <option value="interrogazione">Interrogazione</option>
+              <option value="altro">Altro</option>
+            </select>
+            <button type="submit">Salva Evento</button>
+            <button type="button" id="cancel-event">Annulla</button>
+          </form>
+        </div>
+        <div id="events-list"></div>
+      </div>
+    </div>
+  </section>
+  <section id="grades" class="section">
+    <h2>Registro Voti e Obiettivi</h2>
+    <table id="grades-table">
+      <thead><tr><th>Materia</th><th>Voto</th><th>Data Inserimento</th><th>Azioni</th></tr></thead>
+      <tbody id="grades-table-body"></tbody>
+    </table>
+    <div id="add-grade-box">
+      <form id="grades-form" style="display:flex; gap:14px; align-items:flex-end; max-width:600px;">
+        <div style="flex:1;">
+          <label for="grade-materia">Materia</label>
+          <input type="text" id="grade-materia" placeholder="Materia" required />
+        </div>
+        <div style="flex:1;">
+          <label for="grade-voto">Voto (1-10)</label>
+          <input type="number" id="grade-voto" min="1" max="10" step="0.1" required />
+        </div>
+        <button type="submit" class="primary-btn">Aggiungi</button>
+      </form>
+    </div>
+    <div id="grade-needed-msg"></div>
+    <h3>Imposta Obiettivo Voto</h3>
+    <form id="goal-form" style="max-width: 480px;">
+      <input type="text" id="goal-materia" placeholder="Materia" required />
+      <input type="number" id="goal-voto" placeholder="Voto obiettivo (1-10)" min="1" max="10" step="0.1" required />
+      <button type="submit" class="primary-btn">Salva Obiettivo</button>
+    </form>
+  </section>
+  <section id="goals" class="section">
+    <h2>Obiettivi Personali</h2>
+    <form id="goal-entry-form" style="max-width: 480px;">
+      <textarea id="goal-text" rows="3" placeholder="Descrivi il tuo obiettivo"></textarea>
+      <input type="date" id="goal-deadline" />
+      <button type="submit" class="primary-btn">Aggiungi Obiettivo</button>
+    </form>
+    <div id="goal-list"></div>
+  </section>
+  <section id="materials" class="section">
+    <h2>Materiali di Studio</h2>
+    <form id="material-entry-form" style="max-width: 480px;">
+      <input type="text" id="material-title" placeholder="Titolo materiale" />
+      <input type="text" id="material-link" placeholder="Link o percorso" />
+      <button type="submit" class="primary-btn">Aggiungi Materiale</button>
+    </form>
+    <div id="material-list"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
